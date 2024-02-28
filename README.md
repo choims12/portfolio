@@ -14,6 +14,8 @@
 > 운영적인 측면에서는 팀원들과의 의사소통 및 역할 분배, 프로젝트 일정 관리를 맡아 프로젝트 전반적인 운영을 경험할 수 있었고,  
 > 기술적인 측면에서는 대부분 모델링을 맡았으며 데이터 전처리 및 팀원들의 아이디어를 코드로 구현하는 역할을 수행하였습니다.
 
+<br />
+
 ## 1. 💸 Lending Club 부도 예측 모형
 ### 부도 예측 모형 설계 _(서울대학교 빅데이터 핀테크 전문가 과정 6기, 6조 팀프로젝트)_
  - 핵심 역할 : 이진 분류 예측 모형 모델링, 목적함수 코드 구현, 모델 성능 시각화
@@ -117,21 +119,39 @@
    - 결측치 처리 : 뉴스, 주가, 이자율 등 휴일인 경우 관측되지 않기 때문에 해당 행 삭제
     
 - 사용한 모델
-   - LGBM, XGBoost, Random Forest
-   - 하이퍼 파라미터 최적화(필요한 경우) : 베이지안 최적화, Optuna
+   - Prophet, 1D CNN, Transformer
+   - 각 모델 별 변수들을 다양하게 사용하며 결과 비교
   
    
 ### 프로젝트 결과 
-| Model          | Accuracy | Recall | Precision | F1 Score |
-|----------------|----------|--------|-----------|----------|
-| LGBM           | 0.83     | 0.38   | 0.58      | 0.46     |
-| Random Forest  | 0.72     | 0.67   | 0.37      | 0.48     |
-| XGBoost        | 0.78     | 0.58   | 0.44      | 0.50     |
+- 시계열 자료 예측값의 오차 결과
+  
+| Model          | RMSE  | MAE   | Features                                    |
+|-----------------|-------|-------|---------------------------------------------|
+| Prophet         | 17.71 | 10.55 | Interest, Exchange rate, Sentiment score, KOSPI200 |
+| 1D CNN          | 13.10 | 11.30 | CPI, Interest, Exchange rate, Sentiment score, KOSPI200 |
+| Transformer     | 13.83 | 10.37 | Interest, Exchange rate, Sentiment score, KOSPI200 |  
+
+- 등락을 0, 1로 마킹하였을 때 결과
+
+| Model      | Accuracy | Precision | Recall | F1 Score |
+|-------------|----------|-----------|--------|----------|
+| Prophet (감성 지수 X)     | 0.47     | 0.48      | 0.49   | 0.49     |
+| Prophet (감성 지수 O)     | 0.49     | 0.51      | 0.51   | 0.51     |
+| 1D CNN (감성 지수 X)     | 0.46     | 0.49      | 0.37   | 0.42     |
+| 1D CNN (감성 지수 O)      | 0.59     | 0.62      | 0.57   | 0.6      |
+| Transformer (감성 지수 X) | 0.51     | 0.53      | 0.62   | 0.57     |  
+| Transformer (감성 지수 O) | 0.67     | 0.69      | 0.68   | 0.69     |
+
+
+- Transformer 모델의 경우 감성 지수를 추가하였을 경우 유의미한 성능 향상 및 변곡점을 더 잘 찾아냄을 볼 수 있음
+<img width="321" alt="image" src="https://github.com/choims12/portfolio/assets/118867938/3e43a98e-d256-492b-a327-4598d29ad3dc">
+
   
   
 ### 배운 점   
-- 각 변수들의 의미를 파악하고 새로운 변수를 만듦에 있어서 매우 깊은 고민이 필요
-- 결측치를 처리하고 파생변수를 생성함에 있어 Train Set과 Test Set의 자료 차이를 고려해야 함 
+- 직접 주제를 선정하고 데이터를 생성하는 과정에서 유의미한 데이터를 뽑아내기가 매우 어려움
+- 목적에 맞는 데이터 선정 및 수집, 변수 생성, 모델 구축, 결과 도출 까지의 과정 모두가 매우 중요
  
 > [발표 자료](https://github.com/kimphysicsman/MyLittelTrip_backend), [소스 코드](https://github.com/kimphysicsman/MyLittelTrip_backend)  
 
@@ -139,7 +159,7 @@
 
 
 
-## 2. 🔥 김해시 화재 예측 모형
+## 4. 👮‍♀️ 자금세탁·금융사기 의심거래 탐지 모델 개발
 ### 화재 예측 모형 설계 _(서울대학교 빅데이터 핀테크 전문가 과정 6기, 6조 팀프로젝트)_
  - 핵심 역할 : 이진 분류 예측 모형 모델링, 파생 변수 생성 및 코드 구현, 모델 성능 시각화
 
@@ -179,7 +199,7 @@
 
 <br />
 
-## 2. 🔥 김해시 화재 예측 모형
+## 5. 📊 해외 및 국내 주식 상관관계 분석
 ### 화재 예측 모형 설계 _(서울대학교 빅데이터 핀테크 전문가 과정 6기, 6조 팀프로젝트)_
  - 핵심 역할 : 이진 분류 예측 모형 모델링, 파생 변수 생성 및 코드 구현, 모델 성능 시각화
 
@@ -219,7 +239,7 @@
 
 <br />
 
-## 2. 🔥 김해시 화재 예측 모형
+## 6. 📉 블룸버그 공급망 데이터를 활용한 주가 예측
 ### 화재 예측 모형 설계 _(서울대학교 빅데이터 핀테크 전문가 과정 6기, 6조 팀프로젝트)_
  - 핵심 역할 : 이진 분류 예측 모형 모델링, 파생 변수 생성 및 코드 구현, 모델 성능 시각화
 
@@ -261,15 +281,4 @@
 <br />
 <br />
 
-# 📞 Contact
-
-- 이메일 : kimphysicsman@gmail.com
-- 블로그 : <a href="https://velog.io/@kimphysicsman">
-  <img src="https://user-images.githubusercontent.com/68724828/185885678-8f619bfa-1160-4bb4-a026-f758a4014f82.png" height="26px" style="margin-top: 10px" />
-  </a>
-- 깃허브 : <a href="https://github.com/kimphysicsman">
-  <img src="https://user-images.githubusercontent.com/68724828/185908612-22f4d219-78a7-4de7-bb02-deecaa63bffa.png" height="28px" style="margin-top: 10px" />
-  </a>
-- 유튜브 :<a href="https://www.youtube.com/channel/UCdnXRtn_xnRWzZxUGY0yyWg">
-  <img src="https://user-images.githubusercontent.com/1569988/159397141-21463bc2-2acf-416b-aa15-235664556f34.png" height="24px" style="margin-top: 10px" />
-  </a>
+# 🙇‍♂️ 감사합니다
