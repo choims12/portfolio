@@ -56,7 +56,7 @@
 - 모든 변수들을 사용하는 것이 좋은 것이 아님, 모델 사용 시점과 더불어 도메인 지식에 대한 깊은 고민이 필요  
 - 모델 자체의 성능뿐만 아니라 해당 모델이 사용될 영역에서 어떤 효과를 이끌어낼 수 있는가, 즉 **'목적함수'** 의 중요성
  
-> [발표 자료](https://github.com/kimphysicsman/MyLittelTrip_backend), [소스 코드](https://github.com/kimphysicsman/MyLittelTrip_backend)  
+> [발표 자료 및 소스코드](https://github.com/choims12/LendingClub)
 
 <br />
 
