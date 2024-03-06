@@ -94,7 +94,7 @@
 - 각 변수들의 의미를 파악하고 새로운 변수를 만듦에 있어서 매우 깊은 고민이 필요
 - 결측치를 처리하고 파생변수를 생성함에 있어 Train Set과 Test Set의 자료 차이를 고려해야 함 
  
-> [발표 자료 및 소스코드](https://github.com/choims12/FirePrediction)
+> [발표 자료 및 소스코드](https://github.com/choims12/FirePrediction)
 
 <br />
 
@@ -151,7 +151,7 @@
 - 직접 주제를 선정하고 데이터를 생성하는 과정에서 유의미한 데이터를 뽑아내기가 매우 어려움
 - 목적에 맞는 데이터 선정 및 수집, 변수 생성, 모델 구축, 결과 도출 까지의 과정 모두가 매우 중요
  
-> [발표 자료 및 소스코드](https://github.com/choims12/NewsSentStock)
+> [발표 자료 및 소스코드](https://github.com/choims12/NewsSentStock)
 
 <br />
 
@@ -201,7 +201,7 @@
 - Model에 적용할 수 있도록 데이터를 변형하는 과정에서 정보 손실이 일어나지 않아야 함
 - 정제된 Data가 아닌 현실에서 발생하는 Data는 매우 방대함, 어떤 목적인지 명확히 파악 후 해당 목적에 어떤 데이터가 필요할까, 어떻게 추출할까에 대한 고민이 매우 중요함
  
-> [발표 자료 및 소스코드](https://github.com/choims12/EdgeGAT), [관련 자료](https://www.notion.so/87da1df105e14fb78e55da1e0e86d9f6?pvs=4)  
+> [발표 자료 및 소스코드](https://github.com/choims12/EdgeGAT), [관련 자료](https://www.notion.so/87da1df105e14fb78e55da1e0e86d9f6?pvs=4)  
 
 <br />
 
