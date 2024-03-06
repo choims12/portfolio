@@ -11,7 +11,7 @@
 
 # 📝Projects
 > 데이터 관련 진행했던 프로젝트들을 정리해보았습니다.    
-> 운영적인 측면에서는 팀원들과의 의사소통 및 역할 분배, 프로젝트 일정 관리를 맡아 프로젝트 전반적인 운영을 담당했고,  
+> 운영적인 측면에서는 팀원들과의 의사소통 및 역할 분배, 프로젝트 일정 관리를 맡아 프로젝트 전반적인 운영을 담당하였고,  
 > 기술적인 측면에서는 대부분 모델링을 맡았으며 데이터 전처리 및 팀원들의 아이디어를 코드로 구현하는 역할을 수행하였습니다.
 
 <br />
@@ -179,7 +179,7 @@
   - DGL Library를 통해 데이터를 그래프 데이터로 변형
   - 많은 GNN 모델 중 계좌 자체의 특성(Node Feature), 계좌 간 거래의 특성(Edge Feature) 모두 사용하는 모델 탐색
   - 다양한 정보들이 있기 때문에 특정 정보에 집중이 가능한 Attention 개념을 가진 GAT 모델 중 Edge Feature에도 Attention을 적용하는 Edge GAT 최종 선정
-    ![image](https://github.com/choims12/portfolio/assets/118867938/88626d42-24b9-4405-b56e-fd3ac50fc1dc)
+  - ![image](https://github.com/choims12/portfolio/assets/118867938/88626d42-24b9-4405-b56e-fd3ac50fc1dc)
 
 
    
